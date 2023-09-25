@@ -1,5 +1,6 @@
-const mongoose = require('mongoose');
-const mongoURI = "mongodb://0.0.0.0:27017/Notes";
+import mongoose from 'mongoose';
+
+const mongoURI = `mongodb://0.0.0.0:27017/video`;
 
 const connectToMongo = async () => {
     try {
@@ -10,4 +11,4 @@ const connectToMongo = async () => {
     }
 };
 
-module.exports = connectToMongo;
+export { connectToMongo }; // Exporting the connectToMongo function
