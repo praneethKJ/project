@@ -35,8 +35,8 @@ function Listing() {
       {loader && <Loader />}
       <div className="grid grid-cols-3 md:grid-cols-2 sm:grid-cols-1 pt-12">
         {videoList.length > 0 && videoList.map((video) => (
-          <div className="max-w-lg rounded overflow-hidden shadow-lg mx-6 sm:m-4 cursor-pointer p-2">
-            <Link to={`/videos/${video._id}`} key={video._id}>
+          <div key={video._id} className="max-w-lg rounded overflow-hidden shadow-lg mx-6 sm:m-4 cursor-pointer p-2">
+            <Link to={`/videos/${video._id}`}>
               <img
                 className="w-fit m-auto rounded-md"
                 src={video.imageUrl}

@@ -67,10 +67,6 @@ function Upload() {
     const handleSubmit = async (event) => {
         event.preventDefault()
         setLoader(true)
-        if (!title || !description || !image || !video) {
-            alert("All Fields are mandatory");
-            return;
-        }
         try {
             const imageUrl = await uploadImage('image');
             const videoUrl = await uploadVideo('video');
@@ -82,7 +78,7 @@ function Upload() {
             });
             setLoader(false)
             alert('Uploded successful!');
-            navigate("/video");
+            navigate("/videos");
         }
         catch (error) {
             setLoader(false)
@@ -105,14 +101,14 @@ function Upload() {
                         value={title}
                         maxLength={50}
                         onChange={handleTitle}
-                        placeholder='Give a Title'
+                        placeholder='Give a Title' required
                     />
                     <label className='pt-4 pb-1 text-base w-[100%]' htmlFor="desc">Description:</label>
-                    <textarea className="border-2  border-black rounded-md w-full" type="text" maxLength={200} id="desc" rows="7" value={description} onChange={handleDesc} placeholder='Give a Description' />
+                    <textarea className="border-2 p-1 border-black rounded-md w-full" type="text" maxLength={200} id="desc" rows="7" value={description} onChange={handleDesc} placeholder='Give a Description' />
 
                     <div className="form-row mr-4">
                         <label className='pt-4 pb-1 text-base w-[100%] ' htmlFor="desc">Upload Thumbnail:</label>
-                        <input className="p-1" type="file" accept="image/png, image/jpeg" onChange={(event) => setImage(event.target.files[0])} />
+                        <input className="p-1" type="file" accept="image/png,image/jpeg" onChange={(event) => setImage(event.target.files[0])} required/>
                     </div>
                     <div className="form-row">
                         <label className='pt-4 pb-1 text-base w-[100%]' htmlFor="desc">Upload Video:</label>

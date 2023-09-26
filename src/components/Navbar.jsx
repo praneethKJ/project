@@ -20,8 +20,8 @@ function Navbar() {
                 <div className="menu hidden md:block"><FontAwesomeIcon icon={faBars} onClick={onToggle} className="cursor-pointer mx-4 "/></div>
                 <div className={`md:absolute md:bg-black md:min-h-[60vh] min-h-fit left:0 md:w-full md:z-[-1] md:flex md:items-center ${isNavOpen ?'top-[9%]':'top-[-400px]'}`}>
                     <ul className="flex mx-6 md:flex-col md:m-auto md:space-y-8">
-                        <li className="mr-10 md:mr-0"><Link className="hover:text-red-500 active:text-gray-400 " onClick={closeNavbar} to="/">Upload video</Link></li>
-                        <li className="mr-10 md:mr-0"><Link className="hover:text-red-500 active:text-gray-400" onClick={closeNavbar} to="/videos">Videos</Link></li>
+                        <li className="mr-10 md:mr-0"><Link className="hover:text-red-500 active:text-gray-400 " onClick={closeNavbar} to="/">Upload a video</Link></li>
+                        <li className="mr-10 md:mr-0"><Link className="hover:text-red-500 active:text-gray-400" onClick={closeNavbar} to="/videos">Uploaded Videos</Link></li>
                     </ul>
                 </div>
             </nav>
