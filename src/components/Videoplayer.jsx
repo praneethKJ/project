@@ -52,7 +52,7 @@ const VideoPlayer = () => {
           >
             <source src={videoInfo.videoUrl} />
           </video>
-          <p className="text-sm mt-2">{formatDate(videoInfo.createdAt)}</p>
+          <p className="text-sm mt-2"><strong>Uploaded on: </strong>{formatDate(videoInfo.createdAt)}</p>
         </div>
       )}
     </div>

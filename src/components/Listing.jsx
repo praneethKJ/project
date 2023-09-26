@@ -49,7 +49,7 @@ function Listing() {
             <p className="cursor-auto pt-0.5">
               {video.description}
             </p>
-            <p className="text-xs text-end mt-3">{formatDate(video.createdAt)}</p>
+            <p className="text-xs mt-3"><strong>Uploaded on: </strong>{formatDate(video.createdAt)}</p>
           </div>
         ))}
       </div>
