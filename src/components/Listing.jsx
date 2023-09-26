@@ -33,15 +33,15 @@ function Listing() {
           <div className="max-w-sm rounded overflow-hidden shadow-lg m-3 cursor-pointer p-2">
             <Link to={`/videos/${video._id}`} key={video._id}>
               <img
-                className="w-fit m-auto rounded-"
+                className="w-fit m-auto rounded-md"
                 src={video.imageUrl}
                 alt={video.description}
               />
-              <div className="pt-0 pb-2">
+              <div className="pt-3 pb-1.5">
                 <div className="title font-bold text hover:underline">{video.title}</div>
               </div>
             </Link>
-            <p className="cursor-auto">
+            <p className="cursor-auto pt-0.5">
               {video.description}
             </p>
           </div>

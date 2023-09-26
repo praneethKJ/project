@@ -13,7 +13,7 @@ function App() {
         <Navbar />
         <Routes>
         <Route path="/" element={<Upload />} />
-        <Route path="/video" element={<Listing />} />
+        <Route path="/videos" element={<Listing />} />
           <Route path="/videos/:id" element={<Videoplayer/>} />
         </Routes>
       </BrowserRouter>

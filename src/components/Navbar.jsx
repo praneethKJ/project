@@ -21,8 +21,7 @@ function Navbar() {
                 <div className={`md:absolute md:bg-black md:min-h-[60vh] min-h-fit left:0 md:w-full md:z-[-1] md:flex md:items-center ${isNavOpen ?'top-[9%]':'top-[-400px]'}`}>
                     <ul className="flex mx-6 md:flex-col md:m-auto md:space-y-8">
                         <li className="mr-10 md:mr-0"><Link className="hover:text-red-500 active:text-gray-400 " onClick={closeNavbar} to="/">Upload video</Link></li>
-                        <li className="mr-10 md:mr-0"><Link className="hover:text-red-500 active:text-gray-400" onClick={closeNavbar} to="/video">Videos</Link></li>
-                        {/* <li className="mr-10 md:mr-0"><Link className="hover:text-red-500 active:text-gray-400" to="/">Contact</Link></li> */}
+                        <li className="mr-10 md:mr-0"><Link className="hover:text-red-500 active:text-gray-400" onClick={closeNavbar} to="/videos">Videos</Link></li>
                     </ul>
                 </div>
             </nav>

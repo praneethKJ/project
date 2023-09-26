@@ -32,7 +32,7 @@ const VideoPlayer = () => {
 
       {videoInfo && (
         <div>
-          <h1 className="font-bold text-xl p">{videoInfo.title}</h1>
+          <h1 className="font-bold text-xl pb-1">{videoInfo.title}</h1>
           <p className="text-ellipsis overflow-hidden max-w-[700px] pb-2">{videoInfo.description}</p>
           <video
             width="650"

@@ -4,7 +4,7 @@
 
 @layer base {
     .container {
-        @apply max-w-[1535px] xl:max-w-[1279px] lg:max-w-[1023px] md:max-w-[767px] sm:max-w-[639px];
+        @apply max-w-[1535px] xl:max-w-[1279px] lg:max-w-[1023px] md:max-w-[767px] sm:max-w-[639px] xs:max-w-[385px] xxs:max-w-[285px];
     }
 }
 
