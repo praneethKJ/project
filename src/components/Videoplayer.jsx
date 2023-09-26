@@ -32,15 +32,18 @@ const VideoPlayer = () => {
 
       {videoInfo && (
         <div>
-          <h1 className="font-bold">{videoInfo.title}</h1>
-          <p>{videoInfo.description}</p>
-          <br />
-          <video height={300}
+          <h1 className="font-bold text-xl p">{videoInfo.title}</h1>
+          <p className="text-ellipsis overflow-hidden max-w-[700px] pb-2">{videoInfo.description}</p>
+          <video
+            width="650"
+            height="450"
             controls
-            loop
             autoPlay
+            // "muted" add this if want to play automatically but due to brower restriction in mute
+            loop
             poster={videoInfo.imageUrl}
-            preload="auto">
+            preload="auto"
+          >
             <source src={videoInfo.videoUrl} />
           </video>
         </div>

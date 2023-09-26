@@ -11,6 +11,7 @@ export default {
       'lg': {'max': '1023px'},
       'md': {'max': '767px'},
       'sm': {'max': '639px'},
+      'xs': {'max': '375px'},
     },
     container: {
       center: true,
