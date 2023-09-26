@@ -20,12 +20,18 @@ const VideoPlayer = () => {
       alert("Something went wrong while fetching video");
       setLoader(false);
     }
+
+
   };
 
   useEffect(() => {
     fetchData();
   }, []);
-
+   const formatDate = (createdAt) => {
+    const date = new Date(createdAt);
+    const options = { year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true };
+    return date.toLocaleString(undefined, options);
+   }
   return (
     <div className="container-lg flex justify-center py-4">
       {loader && <Loader />}
@@ -46,6 +52,7 @@ const VideoPlayer = () => {
           >
             <source src={videoInfo.videoUrl} />
           </video>
+          <p className="text-sm mt-2">{formatDate(videoInfo.createdAt)}</p>
         </div>
       )}
     </div>
