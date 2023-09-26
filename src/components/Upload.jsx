@@ -94,12 +94,12 @@ function Upload() {
         <div className="container-sm flex justify-center">
             {loader && <Loader />}
             <div className="max-w-sm rounded overflow-hidden shadow-lg my-4 p-4">
-                <strong className="flex justify-center text-xl">Upload your video</strong>
-                <form className="inline-block items-center" onSubmit={handleSubmit}>
+                <strong className="flex justify-center text-xl xxs:text-base">Upload your video</strong>
+                <form className="inline-block items-center max-w-full" onSubmit={handleSubmit}>
                     <label className='text-base pb-1' htmlFor="title">Title:</label>
                     <br />
                     <input
-                        className="border-2 border-black rounded-md w-[100%]  xs:max-w-[60%]  p-1"
+                        className="border-2 border-black rounded-md w-full p-1"
                         type="text"
                         id='title'
                         value={title}
@@ -108,7 +108,7 @@ function Upload() {
                         placeholder='Give a Title'
                     />
                     <label className='pt-4 pb-1 text-base w-[100%]' htmlFor="desc">Description:</label>
-                    <textarea className="border-2  border-black rounded-md w-[100%] xs:max-w-[60%] p-1" type="text" maxLength={200} id="desc" rows="7" value={description} onChange={handleDesc} placeholder='Give a Description' />
+                    <textarea className="border-2  border-black rounded-md w-full" type="text" maxLength={200} id="desc" rows="7" value={description} onChange={handleDesc} placeholder='Give a Description' />
 
                     <div className="form-row mr-4">
                         <label className='pt-4 pb-1 text-base w-[100%] ' htmlFor="desc">Upload Thumbnail:</label>

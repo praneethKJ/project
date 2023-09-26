@@ -35,7 +35,7 @@ function Listing() {
       {loader && <Loader />}
       <div className="grid grid-cols-3 md:grid-cols-2 sm:grid-cols-1 pt-12">
         {videoList.length > 0 && videoList.map((video) => (
-          <div className="max-w-lg rounded overflow-hidden shadow-lg m-3 cursor-pointer p-2">
+          <div className="max-w-lg rounded overflow-hidden shadow-lg mx-6 cursor-pointer p-2">
             <Link to={`/videos/${video._id}`} key={video._id}>
               <img
                 className="w-fit m-auto rounded-md"
@@ -49,7 +49,7 @@ function Listing() {
             <p className="cursor-auto pt-0.5">
               {video.description}
             </p>
-            <p className="text-xs text-end">{formatDate(video.createdAt)}</p>
+            <p className="text-xs text-end mt-3">{formatDate(video.createdAt)}</p>
           </div>
         ))}
       </div>
