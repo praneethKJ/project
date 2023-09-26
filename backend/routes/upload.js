@@ -1,16 +1,8 @@
 import express from 'express';
 import Upload from "../models/Upload.js";
-import { v2 as cloudinary } from 'cloudinary';
-
 const router = express.Router();
-
-cloudinary.config({
-    cloud_name: 'dxzb2ouxh',
-    api_key: '256832921189371',
-    api_secret: 'EojmDHBHhhDNy6An5BN8Q4O09Wc'
-});
-
-router.post('/upload', async (req, res) => {
+//page one: psot data
+router.post('/', async (req, res) => {
     console.log('Request Body:', req.body);
     const { title, description, imageUrl, videoUrl } = req.body; // Corrected destructuring
 
@@ -20,12 +12,11 @@ router.post('/upload', async (req, res) => {
 
     try {
         const video = await Upload.create({
-            title: title,
-            description: description,
-            image: imageUrl,
-            video: videoUrl,
+            title,
+            description,
+            imageUrl,
+            videoUrl,
         });
-
         if (video) {
             res.status(201).json({
                 success: true,
@@ -44,6 +35,35 @@ router.post('/upload', async (req, res) => {
             message: 'An error occurred while creating the video.',
         });
     }
+});
+
+//page two: get data
+router.get('/', async (req, res) => {
+    try{
+    const videoData = await Upload.find();
+    res.status(200).json({
+      message: "Successfully Fetched videoData",
+      videoData,
+    });
+}catch{
+    res.status(500).json({
+        message: "Something went wrong while fetching data",
+    })
+}
+});
+//page three: get specific video
+router.get('/:id', async (req, res) => {
+    try{
+    const clickedData = await Upload.findById(req.params.id);
+    res.status(200).json({
+      message: "Successfully Fetched clickedData",
+      clickedData,
+    });
+}catch{
+    res.status(500).jason({
+        message: "Something went wrong while fetching data",
+    })
+}
 });
 
 export default router;
