@@ -24,7 +24,8 @@
     "react-dropzone": "^14.2.3",
     "react-router-dom": "^6.16.0",
     "safe-buffer": "^5.2.1",
-    "sass": "^1.68.0"
+    "sass": "^1.68.0",
+    "watch": "^1.0.2"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
